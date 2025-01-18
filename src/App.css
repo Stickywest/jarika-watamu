@@ -1,0 +1,62 @@
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+/* RoomsSection.css */
+.price-tag {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fbbf24; /* Yellow */
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.price {
+  display: inline-block;
+  opacity: 0; /* Start as invisible */
+}
+
+.animate-tally .price {
+  animation: tally 2s steps(10) forwards;
+  animation-delay: 0.5s;
+  opacity: 1; /* Make the price visible after animation starts */
+}
+
+/* Keyframes for the tallying effect */
+@keyframes tally {
+  0% {
+    content: "0";
+  }
+  100% {
+    content: "200"; /* Target number for Deluxe Room */
+  }
+}
+
+/* Apply different numbers for each room */
+.deluxe-price .price {
+  animation: tally 2s steps(10) forwards;
+  animation-delay: 0.5s;
+}
+
+.suite-price .price {
+  animation: tally 2s steps(10) forwards;
+  animation-delay: 1s;
+}
+
+.family-price .price {
+  animation: tally 2s steps(10) forwards;
+  animation-delay: 1.5s;
+}
