@@ -1,5 +1,9 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
+import deluxeImage from '/src/assets/Deluxe.jpg';
+import suitImage from '/src/assets/suit.jpg';
+import familyImage from '/src/assets/family.jpg';
+
 
 const RoomsSection: React.FC = () => {
   // Tallying animation for Deluxe Room
@@ -28,7 +32,8 @@ const RoomsSection: React.FC = () => {
       <h2 className="text-3xl font-bold text-center mb-6">Our Rooms</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="rounded shadow-lg overflow-hidden">
-          <img src="/src/assets/Deluxe.jpg" alt="Deluxe Room" className="w-full h-40 object-cover" />
+        <img src={deluxeImage} alt="Deluxe Room" className="w-full h-40 object-cover" />
+
           <div className="p-4">
             <h3 className="text-xl font-semibold">Deluxe Room</h3>
             <p>A perfect blend of luxury and comfort for your stay.</p>
@@ -42,7 +47,8 @@ const RoomsSection: React.FC = () => {
           </div>
         </div>
         <div className="rounded shadow-lg overflow-hidden">
-          <img src="/src/assets/suit.jpg" alt="Suite Room" className="w-full h-40 object-cover" />
+        <img src={suitImage} alt="suit Room" className="w-full h-40 object-cover" />
+
           <div className="p-4">
             <h3 className="text-xl font-semibold">Suite Room</h3>
             <p>Experience unmatched luxury in our suite rooms.</p>
@@ -56,7 +62,8 @@ const RoomsSection: React.FC = () => {
           </div>
         </div>
         <div className="rounded shadow-lg overflow-hidden">
-          <img src="/src/assets/family.jpg" alt="Family Room" className="w-full h-40 object-cover" />
+        <img src={familyImage} alt="family Room" className="w-full h-40 object-cover" />
+
           <div className="p-4">
             <h3 className="text-xl font-semibold">Family Room</h3>
             <p>Spacious and cozy, perfect for families.</p>

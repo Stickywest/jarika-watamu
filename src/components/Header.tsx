@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import LogoImage from "../assets/jarika.jpg"; // Update path if necessary
-import { FaPhoneAlt, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa"; // FontAwesome Icons
+import { FaPhoneAlt,FaWhatsapp, FaInstagram, FaTwitter } from "react-icons/fa"; // FontAwesome Icons
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,12 +18,20 @@ const Navbar = () => {
       <div className="bg-[#632942] text-white py-2 px-6 flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <FaPhoneAlt className="text-lg" />
-          <span className="text-lg">+254 123 456 789</span>
+          <a href="tel:+254728402547" className="text-lg text-yellow-500 hover:underline">
+  +254 728402547
+           </a>
+
         </div>
         <div className="flex space-x-4">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <FaFacebookF className="text-xl hover:text-[#009fe3] transition-all duration-300" />
-          </a>
+        <a
+  href="https://wa.me/254728402547"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaWhatsapp className="text-xl hover:text-[#25D366] transition-all duration-300" />
+</a>
+
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="text-xl hover:text-[#009fe3] transition-all duration-300" />
           </a>
@@ -39,12 +46,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
           {/* Logo and Brand Name */}
           <div className="flex items-center space-x-3">
-            <img
-              src={LogoImage}
-              alt="Brand Logo"
-              className="w-20 h-20"
-            />
-            <span className="text-xl font-semibold text-black">Jarika Hotel</span>
+            <span className="text-xl font-semibold text-black">Jarika Watamu</span>
           </div>
 
           {/* Toggle Button */}
@@ -81,6 +83,15 @@ const Navbar = () => {
       onClick={() => setIsOpen(false)}
     >
       Home
+    </Link>
+  </li>
+  <li className="border-b md:border-none border-lightGray">
+    <Link
+      to="/booking"
+      className={`block py-3 px-6 md:px-0 font-medium hover:text-[#009fe3] ${getLinkClass("/booking")}`}
+      onClick={() => setIsOpen(false)}
+    >
+      booking
     </Link>
   </li>
   <li className="border-b md:border-none border-lightGray">
